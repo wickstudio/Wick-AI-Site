@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Wick Ai Chat</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="media">
+        <ul>
+          <li>
+            <a href="https://github.com/wickstudio"
+              ><i class="bx bxl-github github"></i
+            ></a>
+          </li>
+          <li>
+            <a href="https://www.youtube.com/@wick_studio"
+              ><i class="bx bxl-youtube youtube"></i
+            ></a>
+          </li>
+          <li>
+            <a href="https://discord.com/invite/wicks"
+              ><i class="bx bxl-discord-alt discord"></i
+            ></a>
+          </li>
+        </ul>
+      </div>
+      <div class="title"><h2>Welcome to wick chat</h2></div>
+      <div id="response"></div>
+      <div class="promptContainer">
+        <div id="prompt">
+          <textarea
+            placeholder="Message Wick AI..."
+            id="questionInput"
+            type="text"
+            oninput="toggleButton()"
+          ></textarea>
+          <button id="btn" class="btn" onclick="submitQuestion()" disabled>
+            <i class="bx bx-up-arrow-alt"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+    <script>
+      function toggleButton() {
+        var input = document.getElementById("questionInput");
+        var button = document.getElementById("btn");
+
+        button.disabled = input.value.trim() === "";
+      }
+    </script>
+    <script src="/script.js"></script>
+  </body>
+</html>

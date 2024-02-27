@@ -1,0 +1,174 @@
+@import url('https://fonts.cdnfonts.com/css/poppins');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+::-webkit-scrollbar {
+    width: 7px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #a3a4b492;
+}
+::-webkit-scrollbar-thumb {
+    background: #494a54;
+    border-radius: 6px;
+}
+::-webkit-scrollbar-track {
+    background: transparent;
+} 
+::-webkit-scrollbar-thumb:active {
+    background: #a3a4b492;
+}
+body {
+    width: 100%;
+    height: 100%;
+    background: #343541;
+}
+.container {
+    background: #343541;
+    padding: 0 18rem;
+    height: 100%;
+}
+.container .media ul {
+    display: flex;
+    gap: 20px;
+    direction: rtl;
+}
+.container .media ul li {
+    list-style: none;
+}
+.container .media ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.8rem;
+}
+.container .media ul li a .github:hover {
+    color: #000;
+    transition: all .2s ease-in-out;
+}
+.container .media ul li a .youtube:hover {
+    color: #ff0808;
+    transition: all .2s ease-in-out;
+}
+.container .media ul li a .discord:hover {
+    color: #5562ea;
+    transition: all .2s ease-in-out;
+}
+.container .title h2 {
+    position: absolute;
+    top: 40%;
+    left: 35%;
+    font-size: 2.5rem;
+    color: #d9d9dece;
+}
+#response {
+    padding: 100px 0;
+}
+#response div {
+    display: flex;
+    align-items: start;
+    margin-bottom: 15px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+#response #textDiv {
+    flex-direction: column;
+    align-items: start;
+}
+#response #textDiv h1 {
+    font-size: 1rem;
+    color: #fff;
+    font-weight: 700;
+}
+#response div img {
+    max-width: 45px;
+}
+#response div p {
+    color: #ffffffcd;
+}
+.promptContainer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+    background: #343541;
+}
+.container #prompt {
+    padding: 5px 15px;
+    width: 60%;
+    border: 1px solid #ffffff5d;
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    top: 85%;
+}
+.container #prompt #questionInput {
+    padding: 10px;
+    border: none;
+    font-size: 1rem;
+    background: transparent;
+    width: 90%;
+    outline: none;
+    color: #fff;
+    z-index: 100;
+    resize: none;
+    height: 40px;
+    overflow-y: hidden;
+}
+.container #prompt .btn {
+    padding: 5px;
+    display: flex;
+    font-size: 1.7rem;
+    border-radius: 0.5rem;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-weight: 900;
+}
+.container #prompt .btn:disabled {
+    cursor: auto;
+    background: #494a54;
+    color: #2f303a;
+}
+.container #prompt .btn:disabled:hover {
+    background: #343541;
+    border: 1px solid #ffffff5d;
+}
+@keyframes write {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+.writing-animation {
+    overflow: hidden;
+    animation: write 1.5s steps(40, end);
+}
+@media (max-width: 768px) {
+    .container {
+        padding: 0;
+    }
+    .container .media ul {
+        direction: none;
+        justify-content: center;
+    }
+    .promptContainer {
+        display: block;
+    }
+    .container #prompt {
+        width: 100%;
+    }
+    .container .title h2 {
+        left: 0%;
+        text-align: center;
+    }
+}
